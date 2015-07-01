@@ -1,0 +1,12 @@
+{
+  "name": "trello-project",
+  "version": "1.0.0",
+  "description": "Sample Trello Project",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Sample Trello Integration</title>
+
+	
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="main.js"></script>
+	<script src="https://api.trello.com/1/client.js?key=<%= key %>"></script>
+</head>
+<body>
+	<h1>Sample Trello Integration</h1>
+	<p>We are using Application Key: <%= key %></p>
+
+	<h2>Authenticate the User</h2>
+	<button id="signInButton">Sign in with Trello</button>
+	<p id="signInError"></p>
+
+	<div id="stage1" style="display:none;">
+		<h2>Pick a Board</h2>
+		<select id="boardList">
+			<option value='false'>Select a Board</option>
+		</select>
+	</div>
+	<div id="stage2" style="display:none;">
+
+		<h2>Choose a List from <span id="boardId"></span></h2>
+		<select id="listList">
+		</select>
+	</div>
+	<div id="stage3" style="display:none;">
+
+		<h2>Choose a Card from <span id="listId"></h2>
+		<select id="cardList">
+		</select>
+	</div>
+	<div id="stage4" style="display:none;">
+
+		<h2 id="cardName"></h2>
+		<p id="cardDescription"></p>
+		<a id="cardLink" target="_blank">Link to this card</a>
+
+
+	</div>
+
+
+</body>
+</html>

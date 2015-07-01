@@ -12,11 +12,13 @@ module.exports = yeoman.generators.Base.extend({
       'Welcome to the awe-inspiring ' + chalk.red('Trello') + ' generator!'
     ));
 
+    this.log("If you don't know your application key, you can get yours at: https://trello.com/app-key");
+
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      type: 'input',
+      name: 'applicationKey',
+      message: 'What is your application key?',
+      store: true
     }];
 
     this.prompt(prompts, function (props) {
@@ -29,29 +31,27 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     app: function () {
+      
       this.fs.copy(
-        this.templatePath('_package.json'),
+        this.templatePath('package.json'),
         this.destinationPath('package.json')
-      );
-      this.fs.copy(
-        this.templatePath('_bower.json'),
-        this.destinationPath('bower.json')
       );
     },
 
     projectfiles: function () {
-      this.fs.copy(
-        this.templatePath('editorconfig'),
-        this.destinationPath('.editorconfig')
+	  this.fs.copyTpl(
+      	this.templatePath('index.html'),
+      	this.destinationPath('index.html'),
+      	{ key: this.props.applicationKey }
       );
       this.fs.copy(
-        this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc')
+      	this.templatePath('main.js'),
+      	this.destinationPath('main.js')
       );
     }
   },
 
   install: function () {
-    this.installDependencies();
+    this.npmInstall();
   }
 });

@@ -1,13 +1,13 @@
 {
   "name": "generator-trello",
   "version": "0.0.0",
-  "description": "Yeoman generator",
+  "description": "Trello API Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "PeEllAvaj/generator-trello",
+  "repository": "trello/yeoman-generator-trello",
   "author": {
     "name": "Stephen Fluin",
-    "email": "stephen.fluin@gmail.com",
+    "email": "stephen@trello.com",
     "url": "https://github.com/PeEllAvaj"
   },
   "scripts": {
