@@ -1,8 +1,8 @@
 {
   "name": "generator-trello",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Trello API Yeoman generator",
-  "license": "MIT",
+  "license": "AGPL",
   "main": "app/index.js",
   "repository": "trello/yeoman-generator-trello",
   "author": {
