@@ -1,10 +1,10 @@
 {
   "name": "generator-trello",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Trello API Yeoman generator",
   "license": "AGPL",
   "main": "app/index.js",
-  "repository": "trello/yeoman-generator-trello",
+  "repository": "https://github.com/trello/yeoman-generator-trello.git",
   "author": {
     "name": "Stephen Fluin",
     "email": "stephen@trello.com",
